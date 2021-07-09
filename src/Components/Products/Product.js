@@ -58,12 +58,11 @@ const Card = styled.div `
     }
 
     @media screen and (max-width: 680px){
-        /* width: 12rem; */
-        margin: 2rem 2rem;
+        margin: 2rem 1rem;
         font-size: .7rem;
         img{
-        width: 13rem;
-        height: 9rem;
+        width: 15rem;
+        height: 11rem;
     }
     .cart{
         width: 2rem;
