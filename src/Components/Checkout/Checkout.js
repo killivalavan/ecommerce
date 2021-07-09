@@ -118,8 +118,8 @@ const Success = styled.div`
         font-size: 2rem;
     }
     button{
-        padding: .5rem 1.5rem;
-        font-size: 1rem;
+        padding: .6rem 1.5rem;
+        font-size: 1.3rem;
         background: #dc0073;
         color: white;
         border: none;
