@@ -10,7 +10,7 @@ import ReactNotifications from 'react-notifications-component';
 import { store } from 'react-notifications-component';
 import 'animate.css';
 import 'react-notifications-component/dist/theme.css';
-
+import Footer from './Components/Footer';
 
 const App = () => {
 
@@ -18,7 +18,6 @@ const App = () => {
   const [cart, setCart] = useState({});
   const [order, setOrder] = useState({});
   const [errorMessage, setErrorMessage] = useState('');
- 
   const fetchProduct = async () =>{
     const {data} = await commerce.products.list();
     setProducts(data);
@@ -85,8 +84,6 @@ const App = () => {
       fetchCart();
     }, [])
 
-   
-    console.log(products);
 
   return (
     <div className="App">
@@ -113,6 +110,7 @@ const App = () => {
             />
         </Route>
       </Switch>
+      <Footer />
     </div>
   );
 }

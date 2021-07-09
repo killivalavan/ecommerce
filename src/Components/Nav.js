@@ -11,10 +11,10 @@ const Nav = ({totalItems}) => {
     return (
         <StyledNav>
             <div className="logo">
-                <a href="#">
+                <Link to="#">
                 <h1> <img src={logo}  alt="" />
                 Springoo</h1>
-                </a>
+                </Link>
             </div>
             <ul>
                 <li>
@@ -23,14 +23,14 @@ const Nav = ({totalItems}) => {
                 <li className="dropdown">
                     <button>Category</button>
                     <div className="dropdown-content">
-                        <a href="#">All</a>
-                        <a href="#">Fashion</a>
-                        <a href="#">Electronics</a>
-                        <a href="#">Grocery</a>
+                        <Link to="#">All</Link>
+                        <Link to="#">Fashion</Link>
+                        <Link to="#">Electronics</Link>
+                        <Link to="#">Grocery</Link>
                     </div>
                 </li>
                 <li>
-                    <a href="#">Contact Us</a>
+                    <Link to="#">Contact Us</Link>
                 </li>
                 <li className="main">
                     {url.pathname === '/' && (<Link to="/Cart">

@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import CartItem from '../Cart/CartItem';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';

@@ -4,7 +4,7 @@ import Stepper from 'react-stepper-horizontal';
 import AddressFrom from './AddressForm';
 import PaymentFrom from './PaymentFrom'; 
 import { commerce } from '../../Library/commerce';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import spinner from '../../img/loading.gif';
 
 const Checkout = ({cart, order, onCaptureCheckout, error}) => {
@@ -45,7 +45,7 @@ const Checkout = ({cart, order, onCaptureCheckout, error}) => {
     const Confirmation = () => order.customer ?(
         <Success>
          <div>
-            <h2>Thanks your for your purchase, {order.customer.firsname} {order.customer.lastname}</h2>
+            <h2>Thanks your for your purchase {order.customer_firstname} {order.customer_lastname}</h2>
             <h3>Order ID: {order.customer_reference}</h3>
         </div>
         <br />
