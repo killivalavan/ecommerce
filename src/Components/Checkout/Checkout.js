@@ -103,7 +103,7 @@ const Hero = styled.div`
  text-align: center;
  border-radius: 5px;
  .spinner img{
-    width: 50%;
+    width: 6rem;
  }
  
  @media screen and (max-width: 680px){
@@ -125,7 +125,7 @@ const Success = styled.div`
         border: none;
     }
     .spinner img{
-        width: 5rem;
+        width: 4rem;
     }
 `;
 
