@@ -17,9 +17,14 @@ const Products = ({ products, onAddToCart, alert }) => {
 
 const Main = styled.div `
     width: 80%;
-    margin: auto;
+    margin: 2rem auto;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+
+    @media screen and (max-width: 680px){
+        width: 100%;
+    }
     
 `;
 
