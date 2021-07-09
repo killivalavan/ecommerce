@@ -125,7 +125,7 @@ const Success = styled.div`
         border: none;
     }
     .spinner img{
-        width: 30%;
+        width: 5rem;
     }
 `;
 
