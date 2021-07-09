@@ -93,7 +93,7 @@ const Button = styled.div`
     justify-content: space-between;
     button{
         background: #ef233c;
-        padding: .3rem 1.5rem;
+        padding: .6rem 1.5rem;
         color: white;
         border: none;
         border-radius: 2px;
@@ -106,7 +106,6 @@ const Button = styled.div`
 const Tooltip = styled.div `
     position: relative;
     display: inline-block;
-    border-bottom: 1px dotted black;
     &:hover .tooltiptext{
         visibility: visible;
     }

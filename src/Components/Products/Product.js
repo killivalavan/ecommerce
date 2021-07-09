@@ -58,7 +58,7 @@ const Card = styled.div `
     }
 
     @media screen and (max-width: 680px){
-        margin: 2rem 1rem;
+        margin: 2rem 1.5rem;
         font-size: .7rem;
         img{
         width: 15rem;

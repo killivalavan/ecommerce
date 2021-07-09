@@ -51,7 +51,7 @@ const Section = styled.div `
             background: #ef233c;
             color: white;
             border: none;
-            padding: .3rem 1.5rem;
+            padding: .6rem 1.5rem;
             border-radius: 5px;
             transition: all .5s ease;
             &:hover{
@@ -60,7 +60,7 @@ const Section = styled.div `
         }
         }
         .submit{
-            padding: .3rem 1.5rem;
+            padding: .6rem 1.5rem;
             background: #34a0a4;
             color: white;
             border: none;

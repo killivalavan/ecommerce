@@ -3,14 +3,13 @@ import styled from 'styled-components';
 import Stepper from 'react-stepper-horizontal';
 import AddressFrom from './AddressForm';
 import PaymentFrom from './PaymentFrom'; 
-import Confirmation from './Confirmation';
 import { commerce } from '../../Library/commerce';
 import { Link, useHistory } from 'react-router-dom';
-
+import spinner from '../../img/loading.gif';
 
 const Checkout = ({cart, order, onCaptureCheckout, error}) => {
 
-    const history = useHistory();
+    //const history = useHistory();
     const [activeStep, setActiveStep] = useState(0);
     const [shippingData, setShippingData] = useState({});
     const [checkoutToken, setCheckoutToken] = useState(0);
@@ -66,7 +65,8 @@ const Checkout = ({cart, order, onCaptureCheckout, error}) => {
        </>
    ): (
     <div className="spinner">
-        <h2>Loading....</h2>
+        {/* <h2>Loading....</h2> */}
+        <img src={spinner} alt="spinner" />
     </div>
    );
 
@@ -102,6 +102,9 @@ const Hero = styled.div`
  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.1),0px 5px 10px rgba(0, 0, 0, 0.1);
  text-align: center;
  border-radius: 5px;
+ .spinner img{
+    width: 50%;
+ }
  
  @media screen and (max-width: 680px){
     width: 90%;
