@@ -15,7 +15,12 @@ const Hero = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     padding: 1rem;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     h2{
         font-weight: 500;
     }
