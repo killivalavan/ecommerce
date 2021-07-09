@@ -18,7 +18,7 @@ const Nav = ({totalItems}) => {
             </div>
             <ul>
                 <li>
-                    <Link to="/">Home</Link>
+                    <Link to="/">Gome</Link>
                 </li>
                 <li className="dropdown">
                     <button>Category</button>
