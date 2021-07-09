@@ -59,7 +59,7 @@ const Card = styled.div `
 
     @media screen and (max-width: 680px){
         /* width: 12rem; */
-        margin: 1rem;
+        margin: 2rem 2rem;
         font-size: .7rem;
         img{
         width: 13rem;
