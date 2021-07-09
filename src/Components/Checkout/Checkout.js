@@ -124,6 +124,9 @@ const Success = styled.div`
         color: white;
         border: none;
     }
+    .spinner img{
+        width: 30%;
+    }
 `;
 
 export default Checkout

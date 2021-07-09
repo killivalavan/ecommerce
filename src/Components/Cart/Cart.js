@@ -45,17 +45,18 @@ const Cart = ({cart, updateCart, removeCart, emptyCart}) => {
 
 
 const StyledCart = styled.div `
-   
+    width: 80%;
+    margin: auto;
+
     .filledCart{
         display: flex;
         flex-wrap: wrap;
-        width: 80%;
-        margin:auto;
-    
+        //width: 80%;
+        //margin:auto;
+        
     }
     .cardDetails{
         margin: 10rem 0rem;
-
         h3{
             font-size: 2rem;
             font-weight: 500;
@@ -71,6 +72,7 @@ const StyledCart = styled.div `
         .cardDetails{
             margin: 5rem auto;
             width: 95%;
+            margin-left: 2rem;
         }
         .filledCart{
             width: 90%;
