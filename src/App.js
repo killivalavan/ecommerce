@@ -10,7 +10,7 @@ import ReactNotifications from 'react-notifications-component';
 import { store } from 'react-notifications-component';
 import 'animate.css';
 import 'react-notifications-component/dist/theme.css';
-import Footer from './Components/Footer';
+//import Footer from './Components/Footer';
 
 const App = () => {
 
@@ -110,7 +110,7 @@ const App = () => {
             />
         </Route>
       </Switch>
-      <Footer />
+        {/* <Footer /> */}
     </div>
   );
 }

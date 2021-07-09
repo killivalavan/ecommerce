@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Footer = () => {
     return (
         <Hero>
-            <h2>copyright &copy; 2021. All Rights Reserved</h2>
+            <h2>Copyright &copy; 2021. All Rights Reserved</h2>
         </Hero>
     )
 };
