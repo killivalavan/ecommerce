@@ -103,6 +103,7 @@ const Hero = styled.div`
  text-align: center;
  border-radius: 5px;
  .spinner img{
+    margin-top: 2rem;
     width: 6rem;
  }
  
