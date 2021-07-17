@@ -30,7 +30,7 @@ const App = () => {
   const [cart, setCart] = useState({});
   const [order, setOrder] = useState({});
   const [errorMessage, setErrorMessage] = useState('');
-  const [category, setMycategory] = useState("");
+  const [category, setMycategory] = useState("All");
   const [name, setName] = useState([])
   const [filteredCategory, setFilteredCategory] = useState([]);
 
