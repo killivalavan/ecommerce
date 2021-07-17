@@ -30,20 +30,13 @@ const App = () => {
   const [cart, setCart] = useState({});
   const [order, setOrder] = useState({});
   const [errorMessage, setErrorMessage] = useState('');
-  const [category, setMycategory] = useState("All");
+  const [category, setMycategory] = useState("");
   const [name, setName] = useState([])
   const [filteredCategory, setFilteredCategory] = useState([]);
 
- 
- //console.log(products);
-  // products.map((item)=>{
-  //  setName(item.categories[0].name);
-  // })
- 
-
   useEffect(() => {
     filterHandler();
-  }, [category])
+  }, [category, products])
 
   const filterHandler = () =>{
       switch(category){
@@ -72,7 +65,7 @@ const App = () => {
             )
             break;
             
-        default : setFilteredCategory(products)
+        default : setFilteredCategory(products);
       }
   }
 
