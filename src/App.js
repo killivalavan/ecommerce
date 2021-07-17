@@ -1,4 +1,4 @@
-import { useState,useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { GlobalStyle } from './Components/GlobalStyle';
 import Products from './Components/Products/Products';
 import Cart from './Components/Cart/Cart';
@@ -12,12 +12,72 @@ import 'animate.css';
 import 'react-notifications-component/dist/theme.css';
 //import Footer from './Components/Footer';
 
+
+// const getCaty = (products) =>{
+//   let holdItems = products.map((item)=>{
+//     return item.categories[0].name;
+//    });
+
+//      let holdCategories = new Set(holdItems);
+//      let categories = Array.from(holdCategories);
+//      categories = ["all", ...categories]
+//      return categories
+//  }
+ 
 const App = () => {
 
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState({});
   const [order, setOrder] = useState({});
   const [errorMessage, setErrorMessage] = useState('');
+  const [category, setMycategory] = useState("");
+  const [name, setName] = useState([])
+  const [filteredCategory, setFilteredCategory] = useState([]);
+
+ 
+ //console.log(products);
+  // products.map((item)=>{
+  //  setName(item.categories[0].name);
+  // })
+ 
+
+  useEffect(() => {
+    filterHandler();
+  }, [category])
+
+  const filterHandler = () =>{
+      switch(category){
+
+        case "All" : setFilteredCategory(products)
+            break;
+
+        case "Fashion" : setFilteredCategory(
+                products.filter((item) =>  
+                  item.categories[0].name === category
+                )
+            )
+            break;
+
+        case "Electronics" : setFilteredCategory(
+                products.filter((item) =>  
+                  item.categories[0].name === category
+                )
+            )
+            break;
+
+        case "Grocery" : setFilteredCategory(
+                products.filter((item) =>  
+                  item.categories[0].name === category
+                )
+            )
+            break;
+            
+        default : setFilteredCategory(products)
+      }
+  }
+
+
+
   const fetchProduct = async () =>{
     const {data} = await commerce.products.list();
     setProducts(data);
@@ -84,15 +144,18 @@ const App = () => {
       fetchCart();
     }, [])
 
+    //console.log(getCaty()); 
+
+    //console.log(cart);
 
   return (
     <div className="App">
       <GlobalStyle />
-      <Nav totalItems={cart.total_items} />
+      <Nav setMycategory={setMycategory} totalItems={cart.total_items} />
       <ReactNotifications />
       <Switch>
         <Route path="/" exact>
-          <Products alert={alert} products={products} onAddToCart={handleAddToCart} />
+          <Products filteredCategory={filteredCategory} alert={alert} products={products} onAddToCart={handleAddToCart} />
         </Route>
         <Route path="/Cart"> 
           <Cart

@@ -4,10 +4,14 @@ import logo from '../img/logo1.png';
 import cart from '../img/cart.png';
 import { Link, useLocation } from 'react-router-dom';
 
-const Nav = ({totalItems}) => {
+const Nav = ({ totalItems, setMycategory }) => {
 
     const url = useLocation();
 
+    const selectHandler = e =>{
+        setMycategory(e.target.outerText); 
+    }
+   
     return (
         <StyledNav>
             <div className="logo">
@@ -22,11 +26,11 @@ const Nav = ({totalItems}) => {
                 </li>
                 <li className="dropdown">
                     <button>Category</button>
-                    <div className="dropdown-content">
-                        <Link to="#">All</Link>
-                        <Link to="#">Fashion</Link>
-                        <Link to="#">Electronics</Link>
-                        <Link to="#">Grocery</Link>
+                    <div onClick={selectHandler} className="dropdown-content">
+                        <Link to="#" value="All">All</Link>
+                        <Link to="#" value="Fashion">Fashion</Link>
+                        <Link to="#" value="Electronics">Electronics</Link>
+                        <Link to="#" value="Grocery">Grocery</Link>
                     </div>
                 </li>
                 <li>
@@ -117,6 +121,7 @@ const StyledNav = styled.div `
             flex-direction: column;
             background: #011627;
             padding-top: 1.6rem;
+            text-align: left;
             & :hover{
                     background: #343a40;
                 }

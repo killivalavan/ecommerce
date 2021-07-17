@@ -3,12 +3,11 @@ import styled from 'styled-components';
 import Product from '../Products/Product';
 
 
-const Products = ({ products, onAddToCart, alert }) => {
-
+const Products = ({ products, onAddToCart, filteredCategory }) => {
 
     return (
         <Main>
-           {products.map((product) => 
+           {filteredCategory.map((product) => 
             <Product product = {product} key={product.id} onAddToCart={onAddToCart} />
            )}
         </Main>
