@@ -12,6 +12,7 @@ const Nav = ({ totalItems, setMycategory }) => {
 
     const selectHandler = e =>{
         setMycategory(e.target.outerText);
+        setClick(false);
     }
 
    const dropdownHandler = () =>{
@@ -33,10 +34,10 @@ const Nav = ({ totalItems, setMycategory }) => {
                 <li className="dropdown">
                     <button onClick={dropdownHandler}>Category</button>
                     <div onClick={selectHandler} className={`${click ? "dropdown-content clicked" : "dropdown-content" }`}>
-                        <Link onClick={() => setClick(false)} to="#" value="All">All</Link>
-                        <Link onClick={() => setClick(false)} to="#" value="Fashion">Fashion</Link>
-                        <Link onClick={() => setClick(false)} to="#" value="Electronics">Electronics</Link>
-                        <Link onClick={() => setClick(false)} to="#" value="Grocery">Grocery</Link>
+                        <Link to="#" value="All">All</Link>
+                        <Link to="#" value="Fashion">Fashion</Link>
+                        <Link to="#" value="Electronics">Electronics</Link>
+                        <Link to="#" value="Grocery">Grocery</Link>
                     </div>
                 </li>
                 <li>
