@@ -13,17 +13,6 @@ import 'react-notifications-component/dist/theme.css';
 //import Footer from './Components/Footer';
 
 
-// const getCaty = (products) =>{
-//   let holdItems = products.map((item)=>{
-//     return item.categories[0].name;
-//    });
-
-//      let holdCategories = new Set(holdItems);
-//      let categories = Array.from(holdCategories);
-//      categories = ["all", ...categories]
-//      return categories
-//  }
- 
 const App = () => {
 
   const [products, setProducts] = useState([]);
@@ -31,7 +20,6 @@ const App = () => {
   const [order, setOrder] = useState({});
   const [errorMessage, setErrorMessage] = useState('');
   const [category, setMycategory] = useState("");
-  const [name, setName] = useState([])
   const [filteredCategory, setFilteredCategory] = useState([]);
 
   useEffect(() => {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import logo from '../img/logo1.png';
 import cart from '../img/cart.png';
@@ -8,9 +8,15 @@ const Nav = ({ totalItems, setMycategory }) => {
 
     const url = useLocation();
 
+    const [click, setClick] = useState(false);
+
     const selectHandler = e =>{
-        setMycategory(e.target.outerText); 
+        setMycategory(e.target.outerText);
     }
+
+   const dropdownHandler = () =>{
+        setClick(!click)
+   } 
    
     return (
         <StyledNav>
@@ -25,12 +31,12 @@ const Nav = ({ totalItems, setMycategory }) => {
                     <Link to="/">Home</Link>
                 </li>
                 <li className="dropdown">
-                    <button>Category</button>
-                    <div onClick={selectHandler} className="dropdown-content">
-                        <Link to="#" value="All">All</Link>
-                        <Link to="#" value="Fashion">Fashion</Link>
-                        <Link to="#" value="Electronics">Electronics</Link>
-                        <Link to="#" value="Grocery">Grocery</Link>
+                    <button onClick={dropdownHandler}>Category</button>
+                    <div onClick={selectHandler} className={`${click ? "dropdown-content clicked" : "dropdown-content" }`}>
+                        <Link onClick={() => setClick(false)} to="#" value="All">All</Link>
+                        <Link onClick={() => setClick(false)} to="#" value="Fashion">Fashion</Link>
+                        <Link onClick={() => setClick(false)} to="#" value="Electronics">Electronics</Link>
+                        <Link onClick={() => setClick(false)} to="#" value="Grocery">Grocery</Link>
                     </div>
                 </li>
                 <li>
@@ -95,18 +101,16 @@ const StyledNav = styled.div `
             background: #d62246;
             border-radius: 50%;
             padding: .2rem .4rem;
-            /* position: absolute;
-            top: 6px;
-            right: 54px;
-            transform: translate(-54%, -6%); */
         }
-    }
-    .dropdown{
-            position: relative;
-            &:hover .dropdown-content{
-                display: flex;
-            }
+    }    
 
+    .dropdown{
+        position: relative;
+            
+        .dropdown-content.clicked{
+            display: flex;
+        }
+          
         button{
             background: transparent;
             border: none;
@@ -125,9 +129,7 @@ const StyledNav = styled.div `
             & :hover{
                     background: #343a40;
                 }
-
             a{
-               
                 padding: .7rem 1rem; 
             }
         }
