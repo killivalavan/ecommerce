@@ -31,7 +31,7 @@ const Nav = ({ totalItems, setMycategory }) => {
                     <Link to="/">Home</Link>
                 </li>
                 <li className="dropdown">
-                    <button onClick={dropdownHandler}>Category</button>
+                    {url.pathname === '/' && <button onClick={dropdownHandler}>Category</button>}
                     <div onClick={selectHandler} className={`${click ? "dropdown-content clicked" : "dropdown-content" }`}>
                         <Link onClick={() => setClick(false)} to="#" value="All">All</Link>
                         <Link onClick={() => setClick(false)} to="#" value="Fashion">Fashion</Link>
