@@ -28,7 +28,7 @@ const Contact = () => {
     }
 
     return (
-        <>
+        <Main>
             <Container>
                 <div className={`card ${swap? "flipped" : ""}`}>
                     <div className="front">
@@ -68,12 +68,16 @@ const Contact = () => {
                     </div>
                 </div>
             </Container>  
-        </>
+        </Main>
     )
 };
 
+const Main = styled.div`
+    min-height: 92vh;
+`;
+
 const Container = styled.div`
-    min-height: 62vh;
+    height: 70vh;
     position: relative;
     perspective: 800px;
     -webkit-perspective: 800px;
@@ -113,7 +117,8 @@ const Container = styled.div`
         width: 90%;
         margin: auto;
         img{
-            width: 90%; 
+            width: 90%;
+            margin: auto;
         }
         p{
             font-size: 1.4rem;
@@ -145,6 +150,9 @@ const Container = styled.div`
             display: flex;
             flex-direction: column;
             text-align: center;
+            h1{
+                padding-bottom: 2rem;
+            }
             input, textarea, button{
                 margin: 1rem;
                 padding: .6rem 1rem;
