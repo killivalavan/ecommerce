@@ -76,6 +76,9 @@ const Container = styled.div`
     min-height: 62vh;
     position: relative;
     perspective: 800px;
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
     width: 30%;
     margin: 10rem auto;
     
@@ -89,11 +92,17 @@ const Container = styled.div`
         position: absolute;
         transition: transform 1s;
         transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
+        -moz-transform-style: preserve-3d;
+        -o-transform-style: preserve-3d;
     }
 
     .card div {
         position: absolute;
         backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -o-backface-visibility: hidden;
     }
 
     .card .front {
@@ -125,6 +134,9 @@ const Container = styled.div`
     
     .card .back {
         transform: rotateY( 180deg );
+        -webkit-transform: rotateY( 180deg );
+        -moz-transform: rotateY( 180deg );
+        -o-transform: rotateY( 180deg );
         width: 80%;
         form{
             display: flex;
@@ -148,8 +160,12 @@ const Container = styled.div`
     }
     .card.flipped {
         transform: rotateY( 180deg );
+        -webkit-transform: rotateY( 180deg );
+        -moz-transform: rotateY( 180deg );
+        -o-transform: rotateY( 180deg );
     }
     @media screen and (max-width: 680px){
+        min-height: 50vh;
         width: 80%;
     }
 `;
