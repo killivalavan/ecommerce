@@ -152,7 +152,7 @@ const Container = styled.div`
         -o-transform: rotateY( 180deg );
         width: 80%;
         text-align: center;
-        z-index: 2;
+        z-index: 3;
         h1{
                 padding-bottom: 2rem;
             }
