@@ -112,6 +112,9 @@ const Container = styled.div`
         justify-content: center;
         width: 90%;
         margin: auto;
+        img{
+            width: 90%; 
+        }
         p{
             font-size: 1.4rem;
             font-weight: 500;
