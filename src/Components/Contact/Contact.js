@@ -37,8 +37,8 @@ const Contact = () => {
                         <button onClick={swapHandler}>Contact Us</button>
                     </div>
                     <div className="back">
+                        <h1>Contact Us</h1>
                         <form onSubmit={handleSubmit} action="https://formspree.io/f/xwkandqb" method="post">
-                            <h1>Contact Us</h1>
                             <input type="text" name="name" id="" placeholder="Name" className="name" />
                             <ValidationError 
                                 prefix="name" 
@@ -146,14 +146,13 @@ const Container = styled.div`
         -moz-transform: rotateY( 180deg );
         -o-transform: rotateY( 180deg );
         width: 80%;
-        form{
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-            h1{
+        text-align: center;
+        h1{
                 padding-bottom: 2rem;
             }
+        form{
             input, textarea, button{
+                width: 100%;
                 margin: 1rem;
                 padding: .6rem 1rem;
                 border: 2px solid #F8F8F8;
