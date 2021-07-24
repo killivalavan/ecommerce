@@ -41,7 +41,7 @@ const Nav = ({ totalItems, setMycategory }) => {
                     </div>
                 </li>
                 <li>
-                    <Link to="#">Contact Us</Link>
+                    <Link to="/Contact">Contact Us</Link>
                 </li>
                 <li className="main">
                     {url.pathname === '/' && (<Link to="/Cart">

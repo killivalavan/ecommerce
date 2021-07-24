@@ -3,6 +3,7 @@ import { GlobalStyle } from './Components/GlobalStyle';
 import Products from './Components/Products/Products';
 import Cart from './Components/Cart/Cart';
 import Nav from './Components/Nav';
+import Contact from './Components/Contact/Contact';
 import { commerce } from './Library/commerce';
 import { Route, Switch } from 'react-router-dom';
 import Checkout from './Components/Checkout/Checkout';
@@ -152,6 +153,9 @@ const App = () => {
             order={order}
             error={errorMessage}
             />
+        </Route>
+        <Route path="/Contact">
+          <Contact />
         </Route>
       </Switch>
         {/* <Footer /> */}
