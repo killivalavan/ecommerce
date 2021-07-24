@@ -74,10 +74,15 @@ const Contact = () => {
 
 const Main = styled.div`
     min-height: 92vh;
+    
+    @media screen and (max-width: 680px){
+        min-height: 30vh;
+       
+    }
 `;
 
 const Container = styled.div`
-    height: 70vh;
+    height: 50rem;
     position: relative;
     perspective: 800px;
     -webkit-perspective: 800px;
@@ -147,6 +152,7 @@ const Container = styled.div`
         -o-transform: rotateY( 180deg );
         width: 80%;
         text-align: center;
+        z-index: 2;
         h1{
                 padding-bottom: 2rem;
             }
@@ -174,10 +180,12 @@ const Container = styled.div`
         -moz-transform: rotateY( 180deg );
         -o-transform: rotateY( 180deg );
     }
+
     @media screen and (max-width: 680px){
-        min-height: 50vh;
+        min-height: 40vh;
         width: 80%;
     }
+   
 `;
 
 const Thanks = styled.div`
