@@ -87,7 +87,7 @@ const Hero = styled.div`
     h1{
         font-size: 3rem;
         font-weight: lighter;
-        margin: 5rem;
+        margin: 5rem 0rem 2rem 0rem;
         text-align:center;
     }
     .empty-cart, .checkout{
