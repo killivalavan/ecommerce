@@ -92,6 +92,7 @@ const Container = styled.div`
     margin: 10rem auto;
     
     .card {
+        z-index: 0;
         background: #F8F8F8;
         display: flex;
         justify-content: center;
