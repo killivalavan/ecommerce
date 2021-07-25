@@ -76,7 +76,7 @@ const Main = styled.div`
     min-height: 92vh;
     
     @media screen and (max-width: 680px){
-        min-height: 30vh;
+        min-height: 20vh;
        
     }
 `;
@@ -152,7 +152,6 @@ const Container = styled.div`
         -o-transform: rotateY( 180deg );
         width: 80%;
         text-align: center;
-        z-index: 3;
         h1{
                 padding-bottom: 2rem;
             }
@@ -184,6 +183,7 @@ const Container = styled.div`
     @media screen and (max-width: 680px){
         min-height: 40vh;
         width: 80%;
+        margin: 4rem auto;
     }
    
 `;
