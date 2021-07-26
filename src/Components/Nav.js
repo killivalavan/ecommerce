@@ -9,6 +9,8 @@ const Nav = ({ totalItems, setMycategory }) => {
     const url = useLocation();
 
     const [click, setClick] = useState(false);
+    const [disable, setDisable] = useState(false);
+
 
     const selectHandler = e =>{
         setMycategory(e.target.outerText);
@@ -31,7 +33,7 @@ const Nav = ({ totalItems, setMycategory }) => {
                 <li>
                     <Link to="/">Home</Link>
                 </li>
-                <li className="dropdown">
+                <li className={`dropdown ${url.pathname !== '/' ? "disable" : ""} `}>
                     <button onClick={dropdownHandler}>Category</button>
                     <div onClick={selectHandler} className={`${click ? "dropdown-content clicked" : "dropdown-content" }`}>
                         <Link to="#" value="All">All</Link>
@@ -86,10 +88,9 @@ const StyledNav = styled.div `
     }
     
     ul{
-        flex: 1 1 30rem;
+        flex: 2 1 30rem;
         display: flex;
         justify-content: space-around;
-
         li{
             font-size: 1.6rem;
             font-weight: 400;
@@ -104,13 +105,19 @@ const StyledNav = styled.div `
             padding: .2rem .4rem;
         }
     }    
-
+    .dropdown.disable{
+        pointer-events: none;
+        opacity: .9;
+    } 
+    
     .dropdown{
         position: relative;
-            
+         
         .dropdown-content.clicked{
             display: flex;
         }
+
+
           
         button{
             background: transparent;
@@ -127,6 +134,7 @@ const StyledNav = styled.div `
             background: #011627;
             padding-top: 1.6rem;
             text-align: left;
+            color: white;
             & :hover{
                     background: #343a40;
                 }

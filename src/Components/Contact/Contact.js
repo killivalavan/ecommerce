@@ -74,7 +74,6 @@ const Contact = () => {
 
 const Main = styled.div`
     min-height: 92vh;
-    
     @media screen and (max-width: 680px){
         min-height: 20vh;
        
@@ -92,8 +91,8 @@ const Container = styled.div`
     margin: 10rem auto;
     
     .card {
-        z-index: 0;
-        background: #F8F8F8;
+        z-index: -2;
+        //background: #F8F8F8;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -165,8 +164,8 @@ const Container = styled.div`
                 border-radius: 25px;
                 outline: none;
                 resize: none;
-                font-family: 'Roboto', sans-serif;
-
+                font-family: 'Roboto', sans-serif;  
+                z-index: 3;
             }
             button{
                 background: black;
@@ -223,10 +222,7 @@ const Thanks = styled.div`
         }
         h1{
             font-size: 1.5rem;
-        }
-        button{
-            font-size: 1rem;
-        }        
+        }     
     }
 `;
 
