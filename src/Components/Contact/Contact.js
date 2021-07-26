@@ -116,6 +116,7 @@ const Container = styled.div`
     }
 
     .card .front {
+        min-height: 50vh;
         display: flex;
         flex-direction: column;
         align-items: center;
