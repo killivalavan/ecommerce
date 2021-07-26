@@ -91,8 +91,7 @@ const Container = styled.div`
     margin: 10rem auto;
     
     .card {
-        z-index: -1;
-        background: #F8F8F8;
+        /* background: #F8F8F8; */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -107,10 +106,11 @@ const Container = styled.div`
     }
 
     .card div {
+        background: #F8F8F8;
         position: absolute;
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
-        -moz-backface-visibility: hidden;
+        -moz-backface-visibility: hidden; 
         -o-backface-visibility: hidden;
     }
 
@@ -164,8 +164,7 @@ const Container = styled.div`
                 border-radius: 25px;
                 outline: none;
                 resize: none;
-                font-family: 'Roboto', sans-serif;  
-                z-index: 3;
+                font-family: 'Roboto', sans-serif;
             }
             button{
                 background: black;
