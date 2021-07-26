@@ -124,7 +124,7 @@ const Container = styled.div`
         width: 90%;
         margin: 10rem;
         img{
-            
+            width: 100%;
         }
         p{
             font-size: 1.4rem;
