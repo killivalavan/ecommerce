@@ -195,6 +195,7 @@ const Container = styled.div`
             }
             .disable{
                 pointer-events: none;
+                opacity: 0.65; 
             }
             .enable{
                 pointer-events: all;
