@@ -2,7 +2,7 @@ import React,{ useState } from 'react';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 import contact from '../../img/contact.svg';
-import check from '../../img/check.png';
+import check from '../../img/check.svg';
 import { useForm, ValidationError } from '@formspree/react';
 
 const Contact = () => {
@@ -73,25 +73,24 @@ const Contact = () => {
 };
 
 const Main = styled.div`
-    min-height: 92vh;
-    @media screen and (max-width: 680px){
+    //min-height: 72vh;
+    /* @media screen and (max-width: 680px){
         min-height: 20vh;
        
-    }
+    } */
 `;
 
 const Container = styled.div`
-    height: 50rem;
+    min-height: 40vh;
     position: relative;
     perspective: 800px;
     -webkit-perspective: 800px;
     -moz-perspective: 800px;
     -o-perspective: 800px;
     width: 30%;
-    margin: 10rem auto;
+    margin: 15rem auto;
     
     .card {
-        /* background: #F8F8F8; */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -107,6 +106,8 @@ const Container = styled.div`
 
     .card div {
         background: #F8F8F8;
+        padding: 2rem;
+        min-height: 50vh;
         position: absolute;
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
@@ -120,10 +121,9 @@ const Container = styled.div`
         align-items: center;
         justify-content: center;
         width: 90%;
-        margin: auto;
+        margin: 10rem;
         img{
-            width: 90%;
-            margin: auto;
+            
         }
         p{
             font-size: 1.4rem;
@@ -150,7 +150,6 @@ const Container = styled.div`
         -webkit-transform: rotateY( 180deg );
         -moz-transform: rotateY( 180deg );
         -o-transform: rotateY( 180deg );
-        width: 80%;
         text-align: center;
         h1{
                 padding-bottom: 2rem;
@@ -158,13 +157,17 @@ const Container = styled.div`
         form{
             input, textarea, button{
                 width: 100%;
-                margin: 1rem;
+                margin: .7rem auto;
                 padding: .6rem 1rem;
                 border: 2px solid #F8F8F8;
                 border-radius: 25px;
                 outline: none;
                 resize: none;
                 font-family: 'Roboto', sans-serif;
+                transition: border .5s ease;
+                &:focus{
+                    border: 2px solid #E0E0E0;
+                }
             }
             button{
                 background: black;
@@ -180,7 +183,7 @@ const Container = styled.div`
     }
 
     @media screen and (max-width: 680px){
-        min-height: 40vh;
+        min-height: 65vh;
         width: 80%;
         margin: 4rem auto;
     }
@@ -207,18 +210,21 @@ const Thanks = styled.div`
         margin-bottom: 1rem;
     }
     button{
+        font-size: 1rem;
         margin-bottom: 2rem;
-        border-radius: 2px;
+        border-radius: 20px;
         padding: .3rem 1rem;
-        border: 1px solid black;
+        border: 2px solid black;
         background: black;
         color: white;
+        transition: all .5s ease;
+        &:hover{
+            background: white;
+            color: black;
+        }
     }
     @media screen and (max-width: 680px){
         width: 80%;
-        img{
-            width: 15%;
-        }
         h1{
             font-size: 1.5rem;
         }     
