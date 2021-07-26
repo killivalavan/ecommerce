@@ -116,13 +116,12 @@ const Container = styled.div`
     }
 
     .card .front {
-        height: 60vh;
+        height: 50vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         width: 90%;
-        //margin: 10rem;
         img{
             width: 100%;
         }
@@ -132,6 +131,7 @@ const Container = styled.div`
             margin-bottom: 1rem;
         }
         button{
+            margin-top: 1rem;
             padding: .4rem 1rem;
             border-radius: 5px;      
             background: #6c79d9;
