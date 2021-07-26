@@ -116,7 +116,7 @@ const Container = styled.div`
     }
 
     .card .front {
-        height: 50vh;
+        height: 60vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -201,7 +201,7 @@ const Thanks = styled.div`
     margin: 10rem auto;
     img{
         margin-top: 2rem;
-        width: 5%;
+        width: 6%;
     }
     h1{
        margin: 2rem 0rem .8rem 0rem ;
@@ -228,6 +228,9 @@ const Thanks = styled.div`
         width: 80%;
         h1{
             font-size: 1.5rem;
+        }
+        img{
+            width: 15%;
         }     
     }
 `;
