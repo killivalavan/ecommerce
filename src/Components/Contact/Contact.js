@@ -4,14 +4,34 @@ import {Link} from 'react-router-dom';
 import contact from '../../img/contact.svg';
 import check from '../../img/check.svg';
 import { useForm, ValidationError } from '@formspree/react';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faSync } from '@fortawesome/free-solid-svg-icons';
 
 const Contact = () => {
 
     const [swap , setSwap] = useState(false);
+    const [spin, setSpin] = useState(false);
+    const [active, setActive] = useState(false);
+    // Form states
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [number, setNumber] = useState('');
+    const [message, setMessage] = useState('');
+
+
+    // if( name && email && number && message !== ''){
+    //     alert('superr');
+    // }else{
+    //     alert('bad');
+    // }
 
     const swapHandler = () =>{
         setSwap(!swap);
     } 
+
+    const onclickHandler = () =>{
+        setSpin(!spin);
+    }
 
     const [state, handleSubmit] = useForm("xwkandqb");
     if (state.succeeded) {
@@ -39,31 +59,34 @@ const Contact = () => {
                     <div className="back">
                         <h1>Contact Us</h1>
                         <form onSubmit={handleSubmit} action="https://formspree.io/f/xwkandqb" method="post">
-                            <input type="text" name="name" id="" placeholder="Name" className="name" />
+                            <input type="text" name="name" id="" placeholder="Name" className="name"  onChange={(e) => setName(e.target.value)} />
                             <ValidationError 
                                 prefix="name" 
                                 field="text"
                                 errors={state.errors}
                             />
-                            <input type="email" name="email" className="email" placeholder="Email address"  />
+                            <input type="email" name="email" className="email" placeholder="Email address" onChange={(e)=> setEmail(e.target.value)} />
                             <ValidationError 
                                 prefix="email" 
                                 field="email"
                                 errors={state.errors}
                             />
-                            <input type="number" name="number" className="number" placeholder="Number"  />
+                            <input type="number" name="number" className="number" placeholder="Number" onChange={(e)=> setNumber(e.target.value)} />
                             <ValidationError 
                                 prefix="number" 
                                 field="number"
                                 errors={state.errors}
                             />
-                            <textarea name="message" name="message" type="text" id="" cols="30" rows="7" className="meggases" placeholder="Message" ></textarea>
+                            <textarea name="message" name="message" type="text" id="" cols="30" rows="7" className="meggases" placeholder="Message" onChange={(e)=> setMessage(e.target.value)} ></textarea>
                             <ValidationError 
                                 prefix="Message" 
                                 field="message"
                                 errors={state.errors}
                             />
-                            <button disabled={state.submitting} type="submit">Submit</button>
+                            <button disabled={state.submitting} className={name && email && number && message !== "" ? "enable" : "disable"} onClick={onclickHandler} type="submit">
+                                <FontAwesomeIcon className={`spin ${spin ? "on" : ""}`} icon={faSync} spin  />
+                                Submit
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -170,9 +193,22 @@ const Container = styled.div`
                     border: 2px solid #E0E0E0;
                 }
             }
+            .disable{
+                pointer-events: none;
+            }
+            .enable{
+                pointer-events: all;
+            }
             button{
                 background: black;
                 color: white;
+                .spin{
+                    margin-right: .6rem;
+                    visibility: hidden;
+                }
+                .spin.on{
+                    visibility: visible;
+                }
             }
         }
     }
