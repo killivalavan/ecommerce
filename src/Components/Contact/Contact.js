@@ -122,7 +122,7 @@ const Container = styled.div`
         align-items: center;
         justify-content: center;
         width: 90%;
-        margin: 10rem;
+        //margin: 10rem;
         img{
             width: 100%;
         }
